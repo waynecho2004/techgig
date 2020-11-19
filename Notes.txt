@@ -7,3 +7,16 @@ User should be able to save the job to the favorites by either toggle or in the 
 User has any jobs listed in the favorites, then should be able to see the list of the favorites jobs.
 User should be able to remove the jobs from the favorites list.
 
+
+Components:
+app/
+    => search
+    => positions
+        => position
+            =>save
+            =>remove
+
+State:
+    positions:[]
+
+
