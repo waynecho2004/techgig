@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Positions from './positions/components/Positions';
+
 class App extends  Component{
   render(){
 
@@ -9,6 +11,7 @@ class App extends  Component{
 
 <button>Search</button>
 </div>
+<Positions />
       </>
     )
   }
