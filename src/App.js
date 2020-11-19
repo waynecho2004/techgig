@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import Search from './positions/components/Search'
+import Positions from './positions/components/Positions';
 
 class App extends  Component{
   render(){
 
     return(
       <>
-        <Search 
-          onSubmit = {this.handleSubmit}
-        />
-        <h3>- List of Positions</h3>
+        <Search />
+        <Positions />
       </>
     )
   }

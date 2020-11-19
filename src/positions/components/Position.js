@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Position from './Position'
 class Position extends Component {
   render() {
     return (
