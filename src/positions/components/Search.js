@@ -5,8 +5,21 @@ class Search extends Component {
     return (
       <>
         <form onSubmit={this.props.onSubmit}>
-            <input type="text" placeholder="Job title, Keywords, Company" />
-            <input type="text" placeholder="City, Country, Postal Code" />
+            <div>
+                <label>Job Description</label>
+                <input type="text"
+                    name="description"
+                    placeholder="Job title, Keywords, Company" />
+            </div>
+
+            <div>
+                <label>Location</label>
+                <input type="text" 
+                    name="location"
+                    placeholder="City, Country, Postal Code" />
+            </div>
+            <br />
+
             <button type="submit">Search</button>
         </form>
       </>
