@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+
 
 
 class PositionRow extends Component {
     render() {
-        const COMPANY = this.props.position.company;
-        const TITLE = this.props.position.title;
+        const company = this.props.position.company;
+        const title = this.props.position.title;
+        const location = this.props.position.location;
+        const type = this.props.position.type;
         return (
-            <div className="wrapper">
-                <div className="row" >
-                    <div>
-                        <h3>{COMPANY}</h3>
-                    </div>
-                    <div>
-                        <a href="#" className="btn-small waves-effect waves-light">{TITLE}</a>
-
-                    </div>
+            <div className="position-item">
+                <div className="company-logo">
+                    <img src={this.props.position.company_logo} alt={company} width="100" height="100" />
                 </div>
+                <div className="position-info">
+                    <div className="position-title">
+                        <a href="#">{title}</a></div>
+                    <div className="position-location">
+                        {location} | {type}
+                    </div>
+                    <div className="company-name">{company}</div>
+                </div>
+
             </div>
+
         );
     }
 }

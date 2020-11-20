@@ -36,15 +36,31 @@
     transform: rotate(360deg);
   }
 }
-.wrapper {
-  border: 2px dotted rgb(96, 139, 168);
-  width: 500px;
-}
-.row {
-  width: 500px;
+
+
+.position-item{
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+    padding: 1rem;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    margin: 2rem;
+    cursor: pointer;   
 }
-.row>* {
-  flex: 0 0 33.3333%;
+
+.position-item >*{
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.position-info {
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.company-logo.img{
+    max-width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
 }

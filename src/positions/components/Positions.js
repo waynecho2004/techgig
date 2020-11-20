@@ -8,15 +8,16 @@ class Positions extends Component {
         const showPositions = this.props.positions.map((position, index) => {
             return <PositionRow
                 position={position}
+                handleDetailsClick={() => this.props.handleDetailsClick(position)}
             />
         })
         return (
             <div className="container">
                 <h2>This is the Positions Component!</h2>
                 <h3>Current Jobs</h3>
-                <div>
+                <ol>
                     {showPositions}
-                </div>
+                </ol>
             </div>
         )
     }

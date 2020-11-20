@@ -16,6 +16,7 @@ class App extends Component {
     this.state = {
       //positions: [],
       positions: JOBDB.positions,
+      current: {},
 
     }
   }
@@ -57,6 +58,11 @@ class App extends Component {
       })
 
     // STEP2: setState for positions
+  }
+
+  handleDetailsClick = (position) => {
+    console.log(`Fetching details for ${position}`)    
+    this.setState({ current: position });
   }
 }
 
