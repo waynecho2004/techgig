@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Search from './positions/components/Search'
 import Positions from './positions/components/Positions';
+import Position from './positions/components/Position';
 
 // Routes
 import { Route } from 'react-router-dom';
@@ -33,14 +34,19 @@ class App extends Component {
         <Route path='/' exact render={() => <h2>Welcome to TechGig Search!</h2>} />
         <Route path='/favorites' exact render={() => <h2>WIP!</h2>} />
         <Route path='/about' component={About} />
-        
-        <Route path='/search' render={(props) => {
-          return <Search {...props}  
-          positions={this.state.positions}      
-          onSubmit={this.handleSubmit} />;
-        }} />
 
-       
+        <Route path='/search' render={(props) => {
+          return <Search {...props}
+            handleDetailsClick={this.handleDetailsClick}
+            positions={this.state.positions}
+            current={this.state.current}
+            onSubmit={this.handleSubmit} />;
+        }} />
+        <Route path='/details/:id' exact render={(props) => {
+          return <Position
+            {...props}
+          />
+        }} />
       </>
     )
   }
@@ -71,9 +77,9 @@ class App extends Component {
     // STEP2: setState for positions
   }
 
-  handleDetailsClick = (position) => {
-    console.log(`Fetching details for ${position}`)
-    this.setState({ current: position });
+  handleDetailsClick = (current) => {
+    console.log(`Fetching details for ${current}`)
+    this.setState({ current: current });
   }
 }
 

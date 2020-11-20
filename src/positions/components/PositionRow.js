@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import Fave from './Fave';
+import { Link } from 'react-router-dom';
 
 const PositionRow = (props) => {
     const {
@@ -13,16 +13,17 @@ const PositionRow = (props) => {
         company_logo,
         index
     } = props;
-
+ console.log(id);
     return (
         <>
             <div className="position-item">
                 <div className="company-logo">
                     <img src={company_logo} alt={company} width="100" height="100" />
                 </div>
-                <div className="position-info">
+                <div className="position-info" >
                     <div className="position-title">
-                        <a href="#">{title}</a></div>
+                        <Link to={'/details/'+id}>{title}</Link>                        
+                    </div>
                     <div className="position-location">
                         {location} | {type}
                     </div>
@@ -33,7 +34,7 @@ const PositionRow = (props) => {
                         Posted {moment(new Date(created_at)).fromNow()}
                     </div>
                 </div>
-                
+
             </div>
         </>
     );
