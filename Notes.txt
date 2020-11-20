@@ -12,11 +12,15 @@ Components:
 app/
     => search
     => positions
+        => positionRow (functional Component)
         => position
             =>save
             =>remove
 
 State:
     positions:[]
+
+Local storage:
+    favorites:[]    
 
 
