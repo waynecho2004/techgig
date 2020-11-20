@@ -6,8 +6,10 @@ class Positions extends Component {
     render() {
 
         const showPositions = this.props.positions.map((position, index) => {
-            return <PositionRow
-                position={position}
+            return <PositionRow 
+                key={position.id} 
+                {...position}
+                index={index}
                 handleDetailsClick={() => this.props.handleDetailsClick(position)}
             />
         })
