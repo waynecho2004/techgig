@@ -10,6 +10,7 @@ User should be able to remove the jobs from the favorites list.
 
 Components:
 app/
+    => nav
     => search
     => positions
         => positionRow (functional Component)

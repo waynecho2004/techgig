@@ -37,7 +37,6 @@
   }
 }
 
-
 .position-item{
   display: flex;
   flex-direction: row;
@@ -63,4 +62,17 @@
     max-width: 10rem;
     height: 10rem;
     border-radius: 50%;
+}
+
+
+.ac-footer .ac-icon{
+  position:absolute;
+  left:0;
+  right:0;
+  width:20px;
+  height:30px;
+  margin:auto}
+  .ac-footer .ac-icon-love-dark{
+    background:url("https://community.algolia.com/places/images/svg/icon-heart-dark-66670e8e.svg") 
+  no-repeat center center/contain
 }

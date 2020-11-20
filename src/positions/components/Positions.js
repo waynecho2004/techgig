@@ -4,26 +4,21 @@ import PositionRow from './PositionRow';
 
 class Positions extends Component {
     render() {
-
         const showPositions = this.props.positions.map((position, index) => {
-            return <PositionRow 
-                key={position.id} 
+            return <PositionRow
+                key={position.id}
                 {...position}
                 index={index}
                 handleDetailsClick={() => this.props.handleDetailsClick(position)}
             />
         })
         return (
-            <div className="container">
-                <h2>This is the Positions Component!</h2>
-                <h3>Current Jobs</h3>
-                <ol>
-                    {showPositions}
-                </ol>
+            <div className="container">              
+                <h2 className="section-title">Jobs Listing</h2>              
+                {showPositions}
             </div>
         )
     }
-
 }
 
 export default Positions;

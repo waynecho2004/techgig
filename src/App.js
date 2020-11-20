@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import Search from './positions/components/Search'
 import Positions from './positions/components/Positions';
+
+// Routes
+import { Route } from 'react-router-dom';
+import Nav from './shared/components/Nav';
+import About from './pages/components/About'
+
 import { getAllPositions } from './api';
 
 // testing
@@ -17,19 +23,24 @@ class App extends Component {
       //positions: [],
       positions: JOBDB.positions,
       current: {},
-
     }
   }
 
   render() {
-
     return (
       <>
-        <Search onSubmit={this.handleSubmit} />
-      
-        <Positions
-          positions={this.state.positions}
-          />
+        <Route path='/' component={Nav} />
+        <Route path='/' exact render={() => <h2>Welcome to TechGig Search!</h2>} />
+        <Route path='/favorites' exact render={() => <h2>WIP!</h2>} />
+        <Route path='/about' component={About} />
+        
+        <Route path='/search' render={(props) => {
+          return <Search {...props}  
+          positions={this.state.positions}      
+          onSubmit={this.handleSubmit} />;
+        }} />
+
+       
       </>
     )
   }
@@ -48,11 +59,11 @@ class App extends Component {
     axios.defaults.crossDomain = true;
     axios.get('https://jobs.github.com/positions.json',
       {
-        headers: {"Access-Control-Allow-Origin": "*"},
+        headers: { "Access-Control-Allow-Origin": "*" },
       }
-        ).then((response) => {
-          console.log(response.data);
-        })
+    ).then((response) => {
+      console.log(response.data);
+    })
       .catch((error) => {
         console.log("error: ", error);
       })
@@ -61,7 +72,7 @@ class App extends Component {
   }
 
   handleDetailsClick = (position) => {
-    console.log(`Fetching details for ${position}`)    
+    console.log(`Fetching details for ${position}`)
     this.setState({ current: position });
   }
 }

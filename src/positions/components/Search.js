@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Positions from './Positions';
 
 class Search extends Component {
   render() {
@@ -22,6 +23,10 @@ class Search extends Component {
 
             <button type="submit">Search</button>
         </form>
+        <Positions
+          positions={this.props.positions}
+        />
+
       </>
     )
   }
