@@ -60,6 +60,8 @@ class App extends Component {
     // STEP1: axio search function
 
     // getAllPositions(e.target.description.value, e.target.location.value)
+
+    // Following is testing for axiso
     axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
     axios.defaults.withCredentials = true;
     axios.defaults.crossDomain = true;
