@@ -59,9 +59,12 @@ class App extends Component {
 
     // STEP1: axio search function
 
-    // getAllPositions(e.target.description.value, e.target.location.value)
+    getAllPositions(e.target.description.value, e.target.location.value)
+    const base_url = process.env.REACT_APP_BASE_URL
+    console.log('base_url', base_url)
 
     // Following is testing for axiso
+    /*
     axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
     axios.defaults.withCredentials = true;
     axios.defaults.crossDomain = true;
@@ -75,9 +78,10 @@ class App extends Component {
       .catch((error) => {
         console.log("error: ", error);
       })
-
+      */
     // STEP2: setState for positions
   }
+
 
   handleDetailsClick = (current) => {
     console.log(`Fetching details for ${current}`)

@@ -1,7 +1,9 @@
 import axios from 'axios'
 
 const getAllPositions = (description, location) => {
-    let url = 'https://jobs.github.com/positions.json'
+    const base_url = process.env.REACT_APP_BASE_URL
+    let url = base_url + 'https://jobs.github.com/positions.json'
+    console.log('url: ' + url)
     if (description && location) {
 
     } 
