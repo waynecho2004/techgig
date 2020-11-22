@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: white;  
 }
 
 .App-link {
@@ -75,4 +75,51 @@
   .ac-footer .ac-icon-love-dark{
     background:url("https://community.algolia.com/places/images/svg/icon-heart-dark-66670e8e.svg") 
   no-repeat center center/contain
+}
+
+.card {
+  position: relative;
+  margin: .5rem 0 1rem 0;
+  background-color: #fff;
+  -webkit-transition: -webkit-box-shadow .25s;
+  transition: -webkit-box-shadow .25s;
+  transition: box-shadow .25s;
+  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  border-radius: 2px;
+  
+}
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  display: block;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+img {
+  border-style: none;
+}
+
+
+.card-content {
+  padding: 24px;
+  border-radius: 0 0 2px 2px;
+}
+.card-description {
+margin: 0;
+}
+
+.card-title {
+  display: block;
+  line-height: 32px;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 300;
 }
