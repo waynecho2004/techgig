@@ -38,43 +38,42 @@
 }
 
 .position-item{
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
     padding: 1rem;
     border: 1px solid #000;
     border-radius: 0.5rem;
     margin: 2rem;
     cursor: pointer;   
-}
-
-.position-item >*{
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-}
-.position-info {
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-}
-
-.company-logo.img{
+  }
+  .company-logo.img{
     max-width: 10rem;
     height: 10rem;
     border-radius: 50%;
 }
+  .position-item .position-info{
+    flex: 1 0 25%;
+    box-sizing: border-box;
+    background: #e0ddd5;
+    color: #171e42;
+    padding: 10px;
+  }
 
+  .position-item .position-info .position-title {
+    margin-bottom: 1rem;
+  }
 
-.ac-footer .ac-icon{
-  position:absolute;
-  left:0;
-  right:0;
-  width:20px;
-  height:30px;
-  margin:auto}
-  .ac-footer .ac-icon-love-dark{
-    background:url("https://community.algolia.com/places/images/svg/icon-heart-dark-66670e8e.svg") 
-  no-repeat center center/contain
+  .post-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+  }
+  
+.btn-primary {
+  background-color: #23aa4e;
+  border-color: #177d37;
 }
 
 .card {
@@ -123,3 +122,4 @@ margin: 0;
   font-size: 24px;
   font-weight: 300;
 }
+

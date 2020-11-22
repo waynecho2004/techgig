@@ -1,6 +1,9 @@
 import React from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
+import LikeButton from './LikeButton';
+import HeartButton from './HeartButton';
+import CheckButton from './CheckButton';
 
 const PositionRow = (props) => {
     const {
@@ -13,7 +16,7 @@ const PositionRow = (props) => {
         company_logo,
         index
     } = props;
- console.log(id);
+    console.log(id);
     return (
         <>
             <div className="position-item">
@@ -22,7 +25,7 @@ const PositionRow = (props) => {
                 </div>
                 <div className="position-info" >
                     <div className="position-title">
-                        <Link to={'/details/'+id}>{title}</Link>                        
+                        <Link to={'/details/' + id}>{title}</Link>
                     </div>
                     <div className="position-location">
                         {location} | {type}
@@ -32,6 +35,16 @@ const PositionRow = (props) => {
                 <div className="post-info">
                     <div className="post-time">
                         Posted {moment(new Date(created_at)).fromNow()}
+                    </div>
+                </div>
+                <div className="post-info">
+                    <div className="post-like">
+                        <LikeButton />
+                    </div>
+                </div>
+                <div className="post-info">
+                    <div className="post-like">
+                        <CheckButton />
                     </div>
                 </div>
 

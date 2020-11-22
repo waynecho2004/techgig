@@ -1,9 +1,10 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-//https://materializecss.com/images/sample-1.jpg
+
 
 import AboutDB from '../../AboutDB';
-//width: 18rem;
+
+
 const About = () => {
     const trail = AboutDB.us.map(t => {
         return (
@@ -19,11 +20,17 @@ const About = () => {
     });
     return (
         <>
+            <div class="row">
 
+                <div class="col-sm-12">
+                    <h1>Change your world Using TechGig.</h1>
+                    <p>Set your tech career in motion with TechGig</p>
+                </div>
+
+            </div>
             <div className="row">
                 {trail}
             </div>
-
 
         </>
     )
