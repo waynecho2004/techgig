@@ -25,6 +25,7 @@ class Search extends Component {
         </form>
         <Positions
           positions={this.props.positions}
+          handleAddFavoriteClick={this.props.handleAddFavoriteClick}
         />
 
       </>

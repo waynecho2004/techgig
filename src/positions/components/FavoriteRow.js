@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-import FavoriteDeleteButton from './FavoriteDelete';
+import FavoriteDeleteButton from './ClickableButton';
 
 const FavoriteRow = (props) => {
     const {

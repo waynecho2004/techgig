@@ -22,7 +22,6 @@ class App extends Component {
     super(props);
 
     this.state = {
-      //positions: [],
       positions: [],
       current: {},
     }
@@ -31,12 +30,14 @@ class App extends Component {
   componentDidMount() {
     
     let favorites = JSON.parse(localStorage.getItem('favorites')) 
+    /*
     if((favorites) && (favorites.length !== 0)) {
       console.log('there is localstorage' + favorites.length);
-    } else {  // For local testing only.  Remove for production
+    } else {  
       console.log('there is NO localstorage');
-      favorites = JOBDB.positions 
+      favorites = [] // JOBDB.positions // For local testing only.  Remove for production
     }
+    */
     this.setState({
       favorites: favorites
     })
@@ -63,9 +64,10 @@ class App extends Component {
             handleDetailsClick={this.handleDetailsClick}
             positions={this.state.positions}
             current={this.state.current}
+            handleAddFavoriteClick={this.handleAddFavorite}
             onSubmit={this.handleSubmit} />;
         }} />
-        
+
         <Route path='/details/:id' exact render={(props) => {
           return <Position
             {...props}
@@ -120,6 +122,27 @@ class App extends Component {
       favorites: newPositions,
     })
   }
+
+  handleAddFavorite = position => {
+    console.log("add to favorites: " + position.title);
+   
+    const positions = this.state.favorites;
+
+    let positionFound = positions.findIndex(p => p.id === position.id)
+    
+    // add new position
+    if(positionFound === -1) {
+      positions.push(position);
+
+      localStorage.setItem('favorites', JSON.stringify(positions));
+    
+      this.setState({
+        favorites: positions,
+      })
+    } else {
+      console.log("position already exists, no action");
+    }
+  } 
 }
 
 export default App;
