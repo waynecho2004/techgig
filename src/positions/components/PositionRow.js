@@ -13,7 +13,7 @@ const PositionRow = (props) => {
         company_logo,
         index
     } = props;
- console.log(id);
+ // console.log(id);
     return (
         <>
             <div className="position-item">
