@@ -7,7 +7,12 @@ class Favorites extends Component {
 
         const showPositions = this.props.favorites.map((position, index) => {
             return <FavoriteRow
-                position={position}  
+                href={position.id}
+                key={position.id}
+                {...position}
+                index={index}
+                current={this.props.current}
+                handleDetailsClick={() => this.props.handleDetailsClick(position)}
                 handleRemoveFavoriteClick = {() => this.props.handleRemoveFavoriteClick(position)}
             />
         })
