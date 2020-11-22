@@ -36,7 +36,7 @@ const FavoriteRow = (props) => {
                         Posted {moment(new Date(created_at)).fromNow()}
                     </div>
                 </div>
-                <FavoriteDeleteButton onClick={handleRemoveFavoriteClick}/>
+                <FavoriteDeleteButton onClick={handleRemoveFavoriteClick} buttonTitle="Remove" />
             </div>
         </>
     );
