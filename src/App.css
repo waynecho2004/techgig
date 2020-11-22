@@ -37,6 +37,22 @@
   }
 }
 
+.container { 
+	max-width: 960px; 
+	height: 100%;
+	margin: 0 auto; 
+	padding: 20px;
+	text-align: center;
+}
+
+h2.section-title {
+	font-weight: 400;
+	text-shadow: 
+		3px 3px 0
+		dodgerblue;
+	transition: all 0.2s ease;
+}
+
 .position-item{
     display: flex;
     flex-direction: row;
