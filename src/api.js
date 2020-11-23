@@ -21,6 +21,13 @@ const getAllPositions = (description, location) => {
     return axios.get(url);
 }
 
+const getPositionById = (id) => {
+    const base_url = process.env.REACT_APP_BASE_URL
+    let url = base_url + `https://jobs.github.com/positions/${id}.json`
+    console.log(url);
+    return axios.get(url);
+}
+
 function isBlank(str) {
     return (!str || /^\s*$/.test(str));
 }
@@ -32,5 +39,5 @@ function addParam(param, count) {
     return param;
 }
 
-export {getAllPositions}
+export {getAllPositions, getPositionById}
 

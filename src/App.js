@@ -24,6 +24,7 @@ class App extends Component {
     this.state = {
       positions: [],
       current: {},
+      favorites: [],
     }
   }
 
@@ -40,7 +41,7 @@ class App extends Component {
       favorites: favorites
     })
 
-    this.getAllPositionsFromAPI();
+    // this.getAllPositionsFromAPI();  // Enable in prod
 
   }  
   // Check if the Favorites is Empty
@@ -70,11 +71,25 @@ class App extends Component {
             onSubmit={this.handleSubmit} />;
         }} />
 
-        <Route path='/details/:id' exact render={(props) => {
+
+        <Route path='/positions/details/:id' exact render={(props) => {
+          const id = props.match.params.id
           return <Position
             {...props}
+            positions= {this.state.positions}
+            id = {id}
           />
         }} />
+
+        <Route path='/favorites/details/:id' exact render={(props) => {
+          const id = props.match.params.id
+          return <Position
+            {...props}
+            positions= {this.state.favorites}
+            id = {id}
+          />
+        }} />
+
       </>
     )
   }
