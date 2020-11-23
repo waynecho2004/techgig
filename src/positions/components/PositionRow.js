@@ -16,11 +16,7 @@ const PositionRow = (props) => {
         company_logo,
         index
     } = props;
-<<<<<<< HEAD
  // console.log(id);
-=======
-    console.log(id);
->>>>>>> techgig-route
     return (
         <>
             <div className="position-item">
