@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Search from './positions/components/Search'
-import Positions from './positions/components/Positions';
+
 import Position from './positions/components/Position';
 import Favorites from './positions/components/Favorites';
 

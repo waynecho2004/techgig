@@ -18,7 +18,7 @@ class Favorites extends Component {
         })
         return (
             <div className="container">
-                <h3>Favorite Jobs</h3>
+              <h2 className="section-title">Favorite Jobs Listing</h2> 
                 <div>
                     {showPositions}
                 </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PositionRow from './PositionRow';
-
+//import '../../css/styles.css';
 
 class Positions extends Component {
     render() {
@@ -16,8 +16,7 @@ class Positions extends Component {
             />
         })
         return (
-            <div className="container">              
-                <h2 className="section-title">Jobs Listing</h2>              
+            <div className="container">                          
                 {showPositions}
             </div>
         )

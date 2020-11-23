@@ -1,6 +1,6 @@
 import React from 'react'
 import AboutDB from '../../AboutDB';
-
+import '../../css/styles.css';
 
 const About = () => {
     const us = AboutDB.us.map((t) => {
