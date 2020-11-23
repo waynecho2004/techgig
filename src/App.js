@@ -6,7 +6,7 @@ import Favorites from './positions/components/Favorites';
 
 // Routes
 import { Route } from 'react-router-dom';
-import Nav from './shared/components/Nav';
+import Navigation from './shared/components/Nav';
 import About from './pages/components/About'
 
 import { getAllPositions } from './api';
@@ -52,7 +52,8 @@ class App extends Component {
   render() {
     return (
       <>
-        <Route path='/' component={Nav} />
+      <div className="container">
+        <Route path='/' component={Navigation} />
         <Route path='/' exact render={() => <h2>Welcome to TechGig Search!</h2>} />
         <Route path='/about' component={About} />
 
@@ -94,7 +95,7 @@ class App extends Component {
           />
         }} />
 
-        
+</div>
 
       </>
     )

@@ -1,17 +1,31 @@
 import { Link } from 'react-router-dom';
+import { Navbar,Nav,NavItem } from 'react-bootstrap';
 
-const Nav = () => {
+const Navigation = () => {
     return (
-        <nav>
-            <Link to='/'>Home</Link>
-            {' | '}
-            <Link to='/search'>Search</Link>
-            {'|'}
-            <Link to='/favorites'>Favorites</Link>
-            {'|'}
-            <Link to='/about'>About Us</Link>
-        </nav>
+        <>
+            <div>
+                <div>
+                    <Navbar>
+                        <Navbar.Brand as={Link} to="/" >Overreact</Navbar.Brand>
+                        <Navbar.Collapse>
+                            <Nav>
+                                <Nav.Item>
+                                    <Nav.Link as={Link} to="/search">Search</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link as={Link} to="/favorites">Favorites</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link as={Link} to="/about">About</Nav.Link>
+                                </Nav.Item>
+                            </Nav>
+                        </Navbar.Collapse>
+                    </Navbar>
+                </div>
+            </div>
+        </>
     );
 }
 
-export default Nav;
+export default Navigation;
