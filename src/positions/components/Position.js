@@ -11,9 +11,9 @@ class Position extends Component {
     const position = positions[0];
     
     // Write Filter method
-    const position = this.props.positions.filter((position) => {
+    /*const position = this.props.positions.filter((position) => {
       return position.id === this.props.id;
-    });
+    });*/
 
     return (
       <div className="position">

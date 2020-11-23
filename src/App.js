@@ -56,13 +56,26 @@ class App extends Component {
         <Route path='/' exact render={() => <h2>Welcome to TechGig Search!</h2>} />
         <Route path='/about' component={About} />
 
+
+        <Route path='/favorites/details/:id' exact render={(props) => {
+          const id = props.match.params.id
+          return <Position
+            {...props}
+            positions= {this.state.favorites}
+            id = {id}
+          />
+        }} />
+
+
+
+
         <Route path='/favorites' render={(props) => {
           return <Favorites {...props}
             favorites={this.state.favorites} 
             handleRemoveFavoriteClick={this.handleRemoveFavorite} />;
         }} />
 
-        <Route path='/search' render={(props) => {
+        <Route path='/search' exact render={(props) => {
           return <Search {...props}
             handleDetailsClick={this.handleDetailsClick}
             positions={this.state.positions}
@@ -81,14 +94,7 @@ class App extends Component {
           />
         }} />
 
-        <Route path='/favorites/details/:id' exact render={(props) => {
-          const id = props.match.params.id
-          return <Position
-            {...props}
-            positions= {this.state.favorites}
-            id = {id}
-          />
-        }} />
+        
 
       </>
     )
