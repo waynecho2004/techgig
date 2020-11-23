@@ -2,15 +2,7 @@ import React, { Component } from "react";
 class Position extends Component {
   constructor(props) {
     super(props);
-<<<<<<< HEAD
   }
-=======
-    this.state = {        
-    }
-}
-
-
->>>>>>> 6ec4a8b80c4c0238b7e088e8fa9ed5ec260d8a1a
   render() {
 
     const positions = this.props.positions.filter(position => {
@@ -19,18 +11,13 @@ class Position extends Component {
     const position = positions[0];
     
     // Write Filter method
-<<<<<<< HEAD
     const position = this.props.positions.filter((position) => {
       return position.id === this.props.id;
     });
 
-=======
-    console.log('matching position', position);
->>>>>>> 6ec4a8b80c4c0238b7e088e8fa9ed5ec260d8a1a
     return (
       <div className="position">
         {/* Job ID,type,URl,Created_at,Company,Company URL,,location,title,description*/}
-<<<<<<< HEAD
         <h4>Type: {position.title}</h4>
         <a href={position.url}> GITHUB Posting </a>
         <h4>Created: {position.created_at}</h4>
@@ -40,10 +27,6 @@ class Position extends Component {
         <h4>Job Title: {position.title}</h4>
         <p>Job Description: {position.description}</p>
         <a href={position.how_to_apply}>How To Apply</a>
-=======
-        <h4>{position.title}</h4>
-        <h4>{position.description}</h4>
->>>>>>> 6ec4a8b80c4c0238b7e088e8fa9ed5ec260d8a1a
       </div>
     );
   }
