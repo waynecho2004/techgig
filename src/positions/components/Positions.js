@@ -12,6 +12,7 @@ class Positions extends Component {
                 index={index}
                 current={this.props.current}
                 handleDetailsClick={() => this.props.handleDetailsClick(position)}
+                handleAddFavoriteClick = {() => this.props.handleAddFavoriteClick(position)}
             />
         })
         return (

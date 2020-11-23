@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import LikeButton from './LikeButton';
 import HeartButton from './HeartButton';
 import CheckButton from './CheckButton';
+import AddButton from './ClickableButton';
 
 const PositionRow = (props) => {
     const {
@@ -14,7 +15,8 @@ const PositionRow = (props) => {
         location,
         title,
         company_logo,
-        index
+        index,
+        handleAddFavoriteClick
     } = props;
  // console.log(id);
     return (
@@ -39,7 +41,8 @@ const PositionRow = (props) => {
                 </div>
                 <div className="post-info">
                     <div className="post-like">
-                        <LikeButton />
+               
+                        <AddButton onClick={handleAddFavoriteClick} buttonTitle='Like'/>
                     </div>
                 </div>
                 <div className="post-info">

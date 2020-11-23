@@ -30,14 +30,12 @@ class App extends Component {
   componentDidMount() {
     
     let favorites = JSON.parse(localStorage.getItem('favorites')) 
-    /*
-    if((favorites) && (favorites.length !== 0)) {
-      console.log('there is localstorage' + favorites.length);
-    } else {  
+   
+    if(!this.isFavoritesEmpty(favorites)) {
       console.log('there is NO localstorage');
-      favorites = [] // JOBDB.positions // For local testing only.  Remove for production
+      favorites = []
     }
-    */
+   
     this.setState({
       favorites: favorites
     })
@@ -45,7 +43,11 @@ class App extends Component {
     this.getAllPositionsFromAPI();
 
   }  
-
+  // Check if the Favorites is Empty
+  isFavoritesEmpty(favorites) {
+    return (favorites) && (favorites.length !== 0)
+  }
+  
   render() {
     return (
       <>
