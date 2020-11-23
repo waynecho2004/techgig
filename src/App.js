@@ -24,6 +24,7 @@ class App extends Component {
     this.state = {
       positions: [],
       current: {},
+      detailsId:-1,
     }
   }
 
@@ -39,8 +40,8 @@ class App extends Component {
     this.setState({
       favorites: favorites
     })
-
-    this.getAllPositionsFromAPI();
+    // Should disable for timebeing
+    //this.getAllPositionsFromAPI();
 
   }  
   // Check if the Favorites is Empty
@@ -71,13 +72,29 @@ class App extends Component {
         }} />
 
         <Route path='/details/:id' exact render={(props) => {
-          return <Position
-            {...props}
+            
+          return <Position {...props}
+          positions={this.state.positions}
+                  
           />
         }} />
       </>
     )
   }
+  /*
+   render() {
+        const showPositions = this.props.positions.map((position, index) => {
+            return <PositionRow
+                href={position.id}
+                key={position.id}
+                {...position}
+                index={index}
+                current={this.props.current}
+                handleDetailsClick={() => this.props.handleDetailsClick(position)}
+                handleAddFavoriteClick = {() => this.props.handleAddFavoriteClick(position)}
+            />
+        })
+        */
 
   handleSubmit = (e) => {
     e.preventDefault();
