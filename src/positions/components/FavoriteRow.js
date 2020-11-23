@@ -24,7 +24,7 @@ const FavoriteRow = (props) => {
                 </div>
                 <div className="position-info" >
                     <div className="position-title">
-                        <Link to={'/details/'+id}>{title}</Link>                        
+                        <Link to={'/favorites/details/'+id}>{title}</Link>                        
                     </div>
                     <div className="position-location">
                         {location} | {type}

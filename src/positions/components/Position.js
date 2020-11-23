@@ -7,24 +7,23 @@ class Position extends Component {
     this.state = {        
     }
 }
+
+
   render() {
+
+    const positions = this.props.positions.filter(position => {
+      return position.id === this.props.id
+    })
+    const position = positions[0];
+    
     // Write Filter method
-    console.log(this.props);
+    console.log('matching position', position);
     return (
       <div className="position">
         <p> Renders</p>
         {/* Job ID,type,URl,Created_at,Company,Company URL,,location,title,description*/}
-        <h4>{this.props.position.type}</h4>
-        <a href={this.props.url}></a>
-        <h4>{this.props.created_at}</h4>
-        <h4>{this.props.company}</h4>
-        <h4>{this.props.company_url}</h4>
-        <h4>{this.props.location}</h4>
-        <h4>{this.props.title}</h4>
-        <a href={this.props.url}></a>
-        <p>
-        {this.props.description}
-        </p>
+        <h4>{position.title}</h4>
+        <h4>{position.description}</h4>
       </div>
     )
   }
