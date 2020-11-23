@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: white;  
 }
 
 .App-link {
@@ -37,42 +37,105 @@
   }
 }
 
+.container { 
+	max-width: 960px; 
+	height: 100%;
+	margin: 0 auto; 
+	padding: 20px;
+	text-align: center;
+}
+
+h2.section-title {
+	font-weight: 400;
+	text-shadow: 
+		3px 3px 0
+		dodgerblue;
+	transition: all 0.2s ease;
+}
+
 .position-item{
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
     padding: 1rem;
     border: 1px solid #000;
     border-radius: 0.5rem;
     margin: 2rem;
     cursor: pointer;   
-}
-
-.position-item >*{
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-}
-.position-info {
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-}
-
-.company-logo.img{
+  }
+  .company-logo.img{
     max-width: 10rem;
     height: 10rem;
     border-radius: 50%;
 }
+  .position-item .position-info{
+    flex: 1 0 25%;
+    box-sizing: border-box;
+    background: #e0ddd5;
+    color: #171e42;
+    padding: 10px;
+  }
 
+  .position-item .position-info .position-title {
+    margin-bottom: 1rem;
+  }
 
-.ac-footer .ac-icon{
-  position:absolute;
-  left:0;
-  right:0;
-  width:20px;
-  height:30px;
-  margin:auto}
-  .ac-footer .ac-icon-love-dark{
-    background:url("https://community.algolia.com/places/images/svg/icon-heart-dark-66670e8e.svg") 
-  no-repeat center center/contain
+  .post-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+  }
+  
+.btn-primary {
+  background-color: #23aa4e;
+  border-color: #177d37;
 }
+
+.card {
+  position: relative;
+  margin: .5rem 0 1rem 0;
+  background-color: #fff;
+  -webkit-transition: -webkit-box-shadow .25s;
+  transition: -webkit-box-shadow .25s;
+  transition: box-shadow .25s;
+  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  border-radius: 2px;
+  
+}
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  display: block;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+img {
+  border-style: none;
+}
+
+
+.card-content {
+  padding: 24px;
+  border-radius: 0 0 2px 2px;
+}
+.card-description {
+margin: 0;
+}
+
+.card-title {
+  display: block;
+  line-height: 32px;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 300;
+}
+
