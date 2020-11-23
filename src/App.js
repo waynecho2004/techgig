@@ -69,7 +69,7 @@ class App extends Component {
 
 
 
-        <Route path='/favorites' render={(props) => {
+        <Route path='/favorites' exact render={(props) => {
           return <Favorites {...props}
             favorites={this.state.favorites} 
             handleRemoveFavoriteClick={this.handleRemoveFavorite} />;
