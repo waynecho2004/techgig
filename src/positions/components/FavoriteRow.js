@@ -15,7 +15,7 @@ const FavoriteRow = (props) => {
         index,
         handleRemoveFavoriteClick
     } = props;
- // console.log(id);
+    // console.log(id);
     return (
         <>
             <div className="position-item">
@@ -24,7 +24,7 @@ const FavoriteRow = (props) => {
                 </div>
                 <div className="position-info" >
                     <div className="position-title">
-                        <Link to={'/favorites/details/'+id}>{title}</Link>                        
+                        <Link to={'/favorites/details/' + id}>{title}</Link>
                     </div>
                     <div className="position-location">
                         {location} | {type}
@@ -36,7 +36,11 @@ const FavoriteRow = (props) => {
                         Posted {moment(new Date(created_at)).fromNow()}
                     </div>
                 </div>
-                <FavoriteDeleteButton onClick={handleRemoveFavoriteClick} buttonTitle="Remove" />
+                <div className="post-info">
+                    <div className="post-like">
+                        <FavoriteDeleteButton onClick={handleRemoveFavoriteClick} buttonTitle="Remove" />
+                    </div>
+                </div>
             </div>
         </>
     );
