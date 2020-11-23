@@ -1,10 +1,10 @@
 import React from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-import LikeButton from './LikeButton';
-import HeartButton from './HeartButton';
-import CheckButton from './CheckButton';
-import AddButton from './ClickableButton';
+////import LikeButton from './LikeButton';
+//import HeartButton from './HeartButton';
+//import CheckButton from './CheckButton';
+import LikeButton from './ClickableButton';
 
 const PositionRow = (props) => {
     const {
@@ -40,17 +40,10 @@ const PositionRow = (props) => {
                     </div>
                 </div>
                 <div className="post-info">
-                    <div className="post-like">
-               
-                        <AddButton onClick={handleAddFavoriteClick} buttonTitle='Like'/>
+                    <div className="post-like">               
+                        <LikeButton onClick={handleAddFavoriteClick} buttonTitle='Like'/>
                     </div>
                 </div>
-                <div className="post-info">
-                    <div className="post-like">
-                        <CheckButton />
-                    </div>
-                </div>
-
             </div>
         </>
     );
