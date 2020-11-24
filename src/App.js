@@ -53,7 +53,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <div class="container">
+        <div className="container">
           <Route path='/' component={Navigation} />
           <Route path='/' exact render={() => <h2>Welcome to TechGig Search!</h2>} />
           <Route path='/about' component={About} />
