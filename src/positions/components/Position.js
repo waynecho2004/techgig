@@ -19,7 +19,12 @@ class Position extends Component {
         <h6 class="red"><i>{position.title}</i></h6>
         
         <i><a href={position.company_url} target="_blank">{position.company}</a>, {position.location}, {position.created_at}</i>
+        <br></br>
+        <img src={position.company_logo} alt="company logo" width="70" height="50"></img>
         <hr />
+        
+        
+
         <h6 class="red"><i>Job Description:</i></h6>
         <div>{ ReactHtmlParser (position.description) } </div>
         
