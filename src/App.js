@@ -1,3 +1,6 @@
+/**
+ * This is a react app
+ */
 import React, { Component } from 'react';
 import Search from './positions/components/Search'
 
