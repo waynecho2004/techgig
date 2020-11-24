@@ -18,30 +18,23 @@ const FavoriteRow = (props) => {
     // console.log(id);
     return (
         <>
-            <div className="position-item">
-                <div className="company-logo">
-                    <img src={company_logo} alt={company} width="100" height="100" />
+            <tr key={id}>
+                <td><img src={company_logo} alt={company} width="100" height="100" /></td>
+                <td><div className="position-title">
+                    <Link to={'/favorites/details/' + id}>{title}</Link>
                 </div>
-                <div className="position-info" >
-                    <div className="position-title">
-                        <Link to={'/favorites/details/' + id}>{title}</Link>
-                    </div>
                     <div className="position-location">
                         {location} | {type}
                     </div>
                     <div className="company-name">{company}</div>
-                </div>
-                <div className="post-info">
-                    <div className="post-time">
-                        Posted {moment(new Date(created_at)).fromNow()}
-                    </div>
-                </div>
-                <div className="post-info">
-                    <div className="post-like">
-                        <FavoriteDeleteButton onClick={handleRemoveFavoriteClick} buttonTitle="Remove" />
-                    </div>
-                </div>
-            </div>
+                </td>
+                <td><div className="post-time">
+                    Posted {moment(new Date(created_at)).fromNow()}
+                </div></td>
+                <td> <div className="post-like">
+                    <FavoriteDeleteButton onClick={handleRemoveFavoriteClick} buttonTitle="Remove" />
+                </div></td>
+            </tr>
         </>
     );
 }
