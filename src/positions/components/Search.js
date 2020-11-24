@@ -9,26 +9,27 @@ class Search extends Component {
       <>
         <Container>
           <Form onSubmit={this.props.onSubmit}>
+            <Form.Label>Search For Better Jobs On TechGig</Form.Label>
             <Row>
-              <Col>
+              <Col md="5">
                 <Form.Group controlId="formDescription">
-                  <Form.Label>Job Description</Form.Label>
                   <Form.Control type="text"
                     name="description"
                     placeholder="Job title, Keywords, Company"
                   />
                 </Form.Group>
               </Col>
-              <Col>
+              <Col md="5">
                 <Form.Group controlId="formLocation">
-                  <Form.Label>Location</Form.Label>
                   <Form.Control type="text"
                     name="location"
                     placeholder="City, Country, Postal Code" />
                 </Form.Group>
               </Col>
+              <Col md="">
+              <Button variant="primary" size="sm" type='submit'>Search</Button>
+              </Col>
             </Row>
-            <Button type='submit'>Search</Button>
           </Form>
           <Positions
             positions={this.props.positions}

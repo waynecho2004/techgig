@@ -4,7 +4,7 @@ import { Navbar,Nav,NavItem } from 'react-bootstrap';
 const Navigation = () => {
     return (
         <>
-            <div>
+            <div className="background-gray">
                 <div>
                     <Navbar>
                         <Navbar.Brand as={Link} to="/" >Overreact</Navbar.Brand>
