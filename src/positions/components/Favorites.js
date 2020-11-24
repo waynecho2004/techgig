@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FavoriteRow from './FavoriteRow';
-
+import { Row, Col, Container, Form, Button } from 'react-bootstrap';
 
 class Favorites extends Component {
     render() {
@@ -17,12 +17,12 @@ class Favorites extends Component {
             />
         })
         return (
-            <div className="container">
+            <Container>
               <h2 className="section-title">Favorite Jobs Listing</h2> 
                 <div>
                     {showPositions}
                 </div>
-            </div>
+            </Container>
         )
     }
 

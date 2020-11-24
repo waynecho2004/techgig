@@ -7,7 +7,7 @@ const About = () => {
         
         return (
             <div key = {t.id} className="card" style={{ width: 15 + 'rem' }}>
-                <img className="card-img-top" src={t.imgSmall} alt='/images/logo192.png' />
+                <img className="card-img-top" src={t.imgSmall} alt="/logo192.png" />
                 <div className="card-body">
                     <div className="card-title">{t.name}</div>
                     <div className="card-description">{t.description} </div>

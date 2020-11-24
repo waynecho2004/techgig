@@ -17,7 +17,7 @@ us:[
     },
     {
         "id": "2",
-        "imgSmall":"images/DP.jpg",
+        "imgSmall":"/images/DP.jpg",
         "name":"Penumala, Daniel",
         "description":"A Full Stack Developer Enthusiast",
  
