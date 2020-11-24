@@ -19,7 +19,7 @@ class Positions extends Component {
             />
         })
         return (
-            <div style={{  margin: "0 auto" }}>
+            <div style={{ margin: "0 auto" }}>
                 <h2 style={{ textAlign: "center", margin: "20px auto auto" }}> Job Listings </h2>
 
                 <Table
@@ -27,7 +27,7 @@ class Positions extends Component {
                     style={{ width: "100%", margin: "20px auto" }}
                     striped
                     bordered
-                    responsive                >
+                    responsive>
                     <thead>
                         <tr>
                             {keys.map(heading => {
@@ -36,13 +36,10 @@ class Positions extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                    {showPositions}
+                        {showPositions}
                     </tbody>
-                        
-                 
                 </Table>
             </div>
-
         )
     }
 }
