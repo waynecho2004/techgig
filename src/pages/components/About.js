@@ -1,15 +1,14 @@
 import React from 'react'
 import AboutDB from '../../AboutDB';
 
-import { Card, Row, Col, Container } from 'react-bootstrap';
+import { Card, CardGroup, Row, Col, Container, CardDeck } from 'react-bootstrap';
 
 const About = () => {
     const us = AboutDB.us.map((t) => {
 
         return (
-            <Card key={t.id} style={{ width: 15 + 'rem' }}>
+            <Card className="text-center" key={t.id} style={{ width: 15 + 'rem' }}>
                 <Card.Img variant="top" src={t.imgSmall} alt="/logo192.png" />
-            
                 <Card.Body>
                     <Card.Title>{t.name}</Card.Title>
                     <Card.Text>{t.description} </Card.Text>
@@ -19,17 +18,18 @@ const About = () => {
     });
     return (
         <>
-            <Container>
-                <Row className="col-sm-12">
-                    <Col >
-                        <h1>Change your world Using TechGig.</h1>
-                        <p>Set your tech career in motion with TechGig</p>
-                    </Col>
-                </Row>
-                <Row>
-                    {us}
-                </Row>
-            </Container>
+            <CardDeck>
+                <Card>
+                    <Card.Header>A dream team that understands your skills.
+                                We offer tailored solutions to solve your particular problem in the most efficient way possible.</Card.Header>
+                    <Card.Body>
+                        <CardGroup>{us}
+                        </CardGroup>
+                    </Card.Body>
+                    <Card.Footer className="text-muted">2 days ago</Card.Footer>
+                </Card>
+
+            </CardDeck>
         </>
     )
 }
