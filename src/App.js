@@ -13,9 +13,6 @@ import './css/styles.css'
 
 import { getAllPositions } from './api';
 
-// testing
-import axios from 'axios'
-import JOBDB from './JOBDB';
 import './App.css';
 
 class App extends Component {
@@ -43,8 +40,6 @@ class App extends Component {
       favorites: favorites
     })
 
-    // this.getAllPositionsFromAPI();  // Enable in prod
-
   }
   // Check if the Favorites is Empty
   isFavoritesEmpty(favorites) {
@@ -54,7 +49,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <div class="container">
+        <div className="container">
         
           <Route path='/' component={Navigation} />
           {/* <Route path='/' exact render={() => <h2>Welcome to TechGig Search!</h2>} /> */}

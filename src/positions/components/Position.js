@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ReactHtmlParser from "react-html-parser";
-
 class Position extends Component {
   constructor(props) {
     super(props);
@@ -10,7 +9,6 @@ class Position extends Component {
       return position.id === this.props.id;
     });
     const position = positions[0];
-
     return (
       <div className="position">
         {/* Job ID,type,URl,Created_at,Company,Company URL,,location,title,description*/}
@@ -32,12 +30,10 @@ class Position extends Component {
           height="20"
         ></img>
         <hr />
-
         <h6 class="red">
           <i>Job Description:</i>
         </h6>
         <div>{ReactHtmlParser(position.description)} </div>
-
         <a href={position.how_to_apply}>How To Apply</a>
       </div>
     );
