@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FavoriteRow from './FavoriteRow';
 import { Row, Col, Container, Form, Button } from 'react-bootstrap';
-
+import '../../css/styles.css';
 class Favorites extends Component {
     render() {
 
