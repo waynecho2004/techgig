@@ -1,9 +1,9 @@
 # TechGig React Application
-An online React application to search, view and save the job search postings based on search fields description and location.
+An online React application to search, view and save the job search postings based on search fields description and location. Please click [here](https://techgig.herokuapp.com/#/) to access.
 
 ## Project Links
 - [Githhub](https://github.com/waynecho2004/techgig)
-- [Deployement](https://techgig.herokuapp.com/#/)
+- [TechGig App](https://techgig.herokuapp.com/#/)
 
 
 ## Wireframes and Design
