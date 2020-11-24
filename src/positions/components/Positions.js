@@ -6,7 +6,8 @@ import { Table, NavLink } from "react-bootstrap";
 
 class Positions extends Component {
     render() {
-        let keys = ["Company", "Position", "Date", "Favorite"];
+        if (this.props.positions.length > 0) {
+            let keys = ["Company", "Position", "Date", "Favorite"];
         const showPositions = this.props.positions.map((position, index) => {
             return <PositionRow
                 href={position.id}
@@ -41,6 +42,11 @@ class Positions extends Component {
                 </Table>
             </div>
         )
+
+        } else {
+            return (<></>);
+        }
+        
     }
 }
 
