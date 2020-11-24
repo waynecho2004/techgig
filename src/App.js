@@ -7,6 +7,7 @@ import Favorites from './positions/components/Favorites';
 // Routes
 import { Route } from 'react-router-dom';
 import Navigation from './shared/components/Nav';
+import Welcome from './pages/components/Welcome';
 import About from './pages/components/About'
 import './css/styles.css'
 
@@ -54,8 +55,10 @@ class App extends Component {
     return (
       <>
         <div class="container">
+        
           <Route path='/' component={Navigation} />
-          <Route path='/' exact render={() => <h2>Welcome to TechGig Search!</h2>} />
+          {/* <Route path='/' exact render={() => <h2>Welcome to TechGig Search!</h2>} /> */}
+          <Route path='/' exact render={Welcome} />
           <Route path='/about' component={About} />
 
 
