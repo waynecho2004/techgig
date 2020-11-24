@@ -50,5 +50,9 @@ img.center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
+  width: 20%;
+}
+
+.background-gray {
+  background-color: lightgray;
 }
