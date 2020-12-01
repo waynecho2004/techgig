@@ -1,9 +1,7 @@
 {
   "name": "techgig",
   "version": "0.1.0",
-  "engines": {
-    "node": "14.7.0"
-  },
+  "description": "An online React application to search, view and save the job search postings based on search fields description and location.",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",

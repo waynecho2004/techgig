@@ -49,60 +49,6 @@ class App extends Component {
     return (favorites) && (favorites.length !== 0)
   }
 
-  render() {
-    return (
-      <>
-        <div className="container">
-        
-          <Route path='/' component={Navigation} />
-          {/* <Route path='/' exact render={() => <h2>Welcome to TechGig Search!</h2>} /> */}
-          <Route path='/' exact render={Welcome} />
-          <Route path='/about' component={About} />
-
-
-          <Route path='/favorites/details/:id' exact render={(props) => {
-            const id = props.match.params.id
-            return <Position
-              {...props}
-              positions={this.state.favorites}
-              id={id}
-            />
-          }} />
-
-
-
-
-          <Route path='/favorites' exact render={(props) => {
-            return <Favorites {...props}
-              favorites={this.state.favorites}
-              handleRemoveFavoriteClick={this.handleRemoveFavorite} />;
-          }} />
-
-          <Route path='/search' exact render={(props) => {
-            return <Search {...props}
-              handleDetailsClick={this.handleDetailsClick}
-              positions={this.state.positions}
-              current={this.state.current}
-              handleAddFavoriteClick={this.handleAddFavorite}
-              onSubmit={this.handleSubmit} />;
-          }} />
-
-
-          <Route path='/positions/details/:id' exact render={(props) => {
-            const id = props.match.params.id
-            return <Position
-              {...props}
-              positions={this.state.positions}
-              id={id}
-            />
-          }} />
-
-        </div>
-
-      </>
-    )
-  }
-
   handleSubmit = (e) => {
     e.preventDefault();
     console.log('description: ' + e.target.description.value)
@@ -168,6 +114,54 @@ class App extends Component {
     } else {
       console.log("position already exists, no action");
     }
+  }
+
+  render() {
+    return (
+      <>
+        <div className="container">
+        
+          <Route path='/' component={Navigation} />
+          {/* <Route path='/' exact render={() => <h2>Welcome to TechGig Search!</h2>} /> */}
+          <Route path='/' exact render={Welcome} />
+          <Route path='/about' component={About} />
+          <Route path='/favorites/details/:id' exact render={(props) => {
+            const id = props.match.params.id
+            return <Position
+              {...props}
+              positions={this.state.favorites}
+              id={id}
+            />
+          }} />
+
+          <Route path='/favorites' exact render={(props) => {
+            return <Favorites {...props}
+              favorites={this.state.favorites}
+              handleRemoveFavoriteClick={this.handleRemoveFavorite} />;
+          }} />
+
+          <Route path='/search' exact render={(props) => {
+            return <Search {...props}
+              handleDetailsClick={this.handleDetailsClick}
+              positions={this.state.positions}
+              current={this.state.current}
+              handleAddFavoriteClick={this.handleAddFavorite}
+              onSubmit={this.handleSubmit} />;
+          }} />
+
+          <Route path='/positions/details/:id' exact render={(props) => {
+            const id = props.match.params.id
+            return <Position
+              {...props}
+              positions={this.state.positions}
+              id={id}
+            />
+          }} />
+
+        </div>
+
+      </>
+    )
   }
 }
 

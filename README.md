@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# TechGig React Application
+An online React application to search, view and save the job search postings based on search fields description and location. Please click [here](https://techgig.herokuapp.com/#/) to access.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Links
+- [Githhub](https://github.com/waynecho2004/techgig)
+- [TechGig App](https://techgig.herokuapp.com/#/)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Wireframes and Design
+[WireFrames (Total 4 Pages)](https://www.figma.com/file/UTfiQrkwIIiCXiwQDpbbyk/Github-Job-Search-Wideframe?node-id=0%3A1)
+ 
+ ### Design Concepts:
+ Started with the Wireframes design, followed by Components hierarchy and specifying state for the components, and then added React Routers to handle multiple routes.
 
-### `npm start`
+#### Components: 
+- App
+    - Nav
+    - Search
+        - Positions
+            - PositionRow (functional Component)
+                - Position
+    - Favorites 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Component State
+- positions:[]
+- favorites: []
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Technologies
+- React 
+    - Routes
+    - Links
+- Axios
+    - Third Party API
+- Local Storage
+- Node.js
+- React Bootstrap
+- CSS
 
-### `npm test`
+### Development and Deployment Environment:
+- Visual Studio Code
+- Chrome
+- Heroku
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Version Control:
+- GIT Repo
+- GitHub (Main and Branches)
 
-### `npm run build`
+### MVP
+Build a project using ReactJS App and third party API. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## User Stories and Features
+- User should be able to see the Home page when user accesses the TechGig application. 
+- User should be able to navigate using the navigation bar (Search, Favorites and About Us).
+- User should be able to navigate to the search page.
+- User should be able to perform the search based on the keyword and location.
+- User should be able to see the matching jobs once the search button is clicked.
+- User can click on the 'Like' button to add the job posting to the favorites list.
+- User should be able to see the job details when clicking on the job title.
+- User should be able to navigate to the favorites list page.
+- User should be able to see the favorite job listing on the favorites page.
+- User should be able to remove any job from the favorites list.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Future Development / Enhancement
+- Search based on the job type (full time vs part-time)
+- Job filtered by most recent.
+- Page loading features.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Acknoledgements/References
+- GitHub Job API.
+- Google Search/ Stack overflow.
