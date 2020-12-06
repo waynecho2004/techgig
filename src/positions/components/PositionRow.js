@@ -6,14 +6,14 @@ import LikeButton from './ClickableButton';
 
 const PositionRow = (props) => {
     const {
-        id,
-        type,
+        id,     // it takes id from props.position.id
+        type,   // it takes id from props.position.type
         created_at,
         company,
         location,
         title,
         company_logo,
-        index,
+        index,  // it takes index from props.index
         handleAddFavoriteClick
     } = props;
     // console.log(id);

@@ -12,7 +12,7 @@ class Positions extends Component {
             return <PositionRow
                 href={position.id}
                 key={position.id}
-                {...position}
+                {...position} // from api, position contains: id, created_at, type, url, company, company_logo, location, title, and description
                 index={index}
                 current={this.props.current}
                 handleDetailsClick={() => this.props.handleDetailsClick(position)}

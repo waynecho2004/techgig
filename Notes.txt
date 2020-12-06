@@ -1,3 +1,5 @@
+Created a separate origin
+
 User Stories for techGig MVP:
 User should be able to click on a search button, 
 User should be able to enter on location and/or job category(Description) and click on the search button.
@@ -6,6 +8,7 @@ User clicks on the job on the list, and gets to see the job details.
 User should be able to save the job to the favorites by either toggle or in the local storage.
 User has any jobs listed in the favorites, then should be able to see the list of the favorites jobs.
 User should be able to remove the jobs from the favorites list.
+
 
 
 Components:

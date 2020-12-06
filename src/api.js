@@ -21,6 +21,7 @@ const getAllPositions = (description, location) => {
     return axios.get(url);
 }
 
+// Example: https://jobs.github.com/positions/6b9dce23-5790-46eb-9fbe-8090704eecef.json
 const getPositionById = (id) => {
     const base_url = process.env.REACT_APP_BASE_URL
     let url = base_url + `https://jobs.github.com/positions/${id}.json`
